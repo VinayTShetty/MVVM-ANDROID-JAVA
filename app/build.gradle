@@ -45,12 +45,7 @@ dependencies {
     https://developer.android.com/jetpack/androidx/releases/lifecycle#groovy
      */
     def lifecycle_version = "2.0.0"
-// ViewModel and LiveData
-   // implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-//if not using java 8,use the following line
     annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.0.0'
-//if using java 8,ignore above line and add the following line
-//    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     /**
      * Glide library
