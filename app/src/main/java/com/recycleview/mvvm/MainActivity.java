@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
@@ -32,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
         mFab = findViewById(R.id.fab);
         mRecyclerView = findViewById(R.id.recycler_view);
         mProgressBar = findViewById(R.id.progress_bar);
-        mMainActivityViewModel = ViewModelProviders(this).get(MainActivityViewModel.class);
+       // mMainActivityViewModel = ViewModelProviders(this).get(MainActivityViewModel.class);
+     //   mMainActivityViewModel = new ViewModelProvider(this,new LoginViewModelFactory()).get(MainActivityViewModel.class);
+        mMainActivityViewModel  = new ViewModelProvider(MainActivity.this).get(MainActivityViewModel.class);
    //  mMainActivityViewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         // mMainActivityViewModel = new ViewModelProvider(this, myViewModelFactory).get(MainActivityViewModel.class);
         mMainActivityViewModel.init();
